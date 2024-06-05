@@ -1,17 +1,18 @@
 name: Example CI/CD with Github actions
+
 on:
-push:
-branches: "prod"
+  push:
+    branches: "prod"
 
 env:
-DATABRICKS_HOST: "https://sample_databricks_url.cloud.databricks.com"
-DATABRICKS_TOKEN: ${{ secrets.PROD_DATABRICKS_TOKEN }}
-# replace with your fabric id:
-FABRIC_ID: "10146"
+  DATABRICKS_HOST: "https://sample_databricks_url.cloud.databricks.com"
+  DATABRICKS_TOKEN: ${{ secrets.PROD_DATABRICKS_TOKEN }}
+  # replace with your fabric id:
+  FABRIC_ID: "10146"
 
 jobs:
-build:
-runs-on: ubuntu-latest
+  build:
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - name: Set up JDK 11
