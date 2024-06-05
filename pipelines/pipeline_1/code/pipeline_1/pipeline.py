@@ -8,7 +8,7 @@ from pipeline_1.graph import *
 
 def pipeline(spark: SparkSession) -> None:
     df_dataset1 = dataset1(spark)
-    df_by_average_rating_asc = by_average_rating_asc(spark, df_dataset1)
+    df_by_average_rating_asc_2 = by_average_rating_asc_2(spark, df_dataset1)
 
 def main():
     spark = SparkSession.builder\

@@ -109,8 +109,8 @@
       "id" : "k8aP23YYHZcUCrJroKrar$$3oZSaAbo-Y8sCU3giKCDp",
       "component" : "OrderBy",
       "metadata" : {
-        "label" : "by_average_rating_asc",
-        "slug" : "by_average_rating_asc",
+        "label" : "by_average_rating_asc_2",
+        "slug" : "by_average_rating_asc_2",
         "x" : -380,
         "y" : -180,
         "phase" : 0,
