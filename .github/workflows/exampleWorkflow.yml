@@ -1,5 +1,4 @@
 name: Example CI/CD with Github actions
-
 on:
   push:
     branches: "prod"
@@ -37,4 +36,4 @@ jobs:
       - name: Run PBT test
         run: pbt test --path .
       - name: Run PBT deploy
-        run: pbt deploy --path . --release-version 1.0 --project-id example_project_id
+        run: pbt deploy --path . --release-version 1.0 --project-id 26476
