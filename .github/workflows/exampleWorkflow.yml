@@ -1,9 +1,8 @@
 name: Example CI/CD with Github actions
-
 on:
   push:
     branches: 
-      - "prod"
+    - "main"
 
 env:
   DATABRICKS_HOST: "https://sample_databricks_url.cloud.databricks.com"
