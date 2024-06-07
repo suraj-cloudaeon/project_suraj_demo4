@@ -2,7 +2,7 @@ name: Example CI/CD with Github actions
 on:
   push:
     branches: 
-    - "feature"
+    - "feature/*"
 
 env:
   DATABRICKS_HOST: "https://adb-1531379371750661.1.azuredatabricks.net/"
