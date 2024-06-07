@@ -5,7 +5,7 @@ on:
     - "main"
 
 env:
-  DATABRICKS_HOST: "https://sample_databricks_url.cloud.databricks.com"
+  DATABRICKS_HOST: "https://adb-1531379371750661.1.azuredatabricks.net/"
   DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
   # replace with your fabric id:
   FABRIC_ID: "10146"
