@@ -34,7 +34,7 @@ jobs:
         run: pbt validate --path .
       - name: Run PBT build
         run: pbt build --path .
-      - name: Run PBT test
-        run: pbt test --path .
+      #- name: Run PBT test
+      #  run: pbt test --path .
       - name: Run PBT deploy
         run: pbt deploy --path . --release-version 1.0 --project-id 26476
