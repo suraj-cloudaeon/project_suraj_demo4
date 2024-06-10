@@ -120,7 +120,7 @@
         "cache" : false,
         "detailedStats" : false,
         "isImported" : false,
-        "comment" : "Sorts movies in ascending order based on their average rating.",
+        "comment" : "Sorts the DataFrame by movie average rating in ascending order, with null values appearing first.",
         "autoUpdateComment" : true
       },
       "ports" : {
@@ -274,7 +274,7 @@
             "format" : "sql",
             "expression" : "movie_averageRating"
           },
-          "sortType" : "asc"
+          "sortType" : "desc_nulls_first"
         } ]
       },
       "componentInfo" : {
