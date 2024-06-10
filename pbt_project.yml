@@ -77,6 +77,7 @@ functions:
   udafs: {}
   expressions: {}
   airflowFunctions: {}
+  businessRules: {}
 subgraphs: {}
 sqlModels: {}
 sqlSnapshots: {}

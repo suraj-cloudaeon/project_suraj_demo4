@@ -7,4 +7,4 @@ from pipeline_1.config.ConfigStore import *
 from pipeline_1.udfs.UDFs import *
 
 def by_average_rating_asc(spark: SparkSession, in0: DataFrame) -> DataFrame:
-    return in0.orderBy(col("movie_averageRating").desc_nulls_first())
+    return in0.orderBy(col("movie_averageRating").asc())

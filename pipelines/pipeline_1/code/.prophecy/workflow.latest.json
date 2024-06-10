@@ -117,7 +117,7 @@
         "cache" : false,
         "detailedStats" : false,
         "isImported" : false,
-        "comment" : "Sorts movies in ascending order based on their average rating, with null values appearing first.",
+        "comment" : "Sorts movies in ascending order based on their average rating.",
         "autoUpdateComment" : true
       },
       "ports" : {
@@ -271,7 +271,7 @@
             "format" : "sql",
             "expression" : "movie_averageRating"
           },
-          "sortType" : "desc_nulls_first"
+          "sortType" : "asc"
         } ]
       },
       "componentInfo" : {
