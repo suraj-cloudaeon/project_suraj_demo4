@@ -1,6 +1,6 @@
 name: project_suraj_demo5
 description: ''
-version: 0.0.1
+version: '1'
 author: suraj.thakur@cloudaeon.net
 language: python
 buildSystem: ''
