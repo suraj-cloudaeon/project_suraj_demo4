@@ -117,7 +117,7 @@
         "cache" : false,
         "detailedStats" : false,
         "isImported" : false,
-        "comment" : "Sorts movies in ascending order based on their average rating.",
+        "comment" : "Sorts movies in ascending order based on their average ratings.",
         "autoUpdateComment" : true
       },
       "ports" : {
