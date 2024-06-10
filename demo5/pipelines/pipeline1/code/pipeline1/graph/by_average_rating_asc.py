@@ -6,5 +6,5 @@ from prophecy.libs import typed_lit
 from pipeline1.config.ConfigStore import *
 from pipeline1.functions import *
 
-def Reformat_1(spark: SparkSession, in0: DataFrame) -> DataFrame:
-    return in0
+def by_average_rating_asc(spark: SparkSession, in0: DataFrame) -> DataFrame:
+    return in0.orderBy(col("movie_averageRating").asc())

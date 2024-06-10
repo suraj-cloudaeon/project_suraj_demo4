@@ -71,7 +71,13 @@
     "topLevelPackage" : "pipeline1",
     "configurationVersion" : "v2"
   },
-  "connections" : [ ],
+  "connections" : [ {
+    "id" : "UqtyaE6kLVPWNO5pZM2Wu$$4YRka1HQj248dDL55tYJY",
+    "source" : "o8SdMB0VWFTRFltloczH2$$Ze2sy5CLkA2rhPKRvNDyW",
+    "sourcePort" : "ByCz9w6Hsvmt4zoW5qgkM$$WyWIVyDfm5TWiFICsB0M3",
+    "target" : "pPx5Q2kQ8QFg0Nl6OryCr$$o1FSY5N3lkXl7_LCeDWbf",
+    "targetPort" : "ptmT5X9L2IUrrsWBG9Qsk$$xKtxN2rgBjLG461VnuilN"
+  } ],
   "processes" : {
     "o8SdMB0VWFTRFltloczH2$$Ze2sy5CLkA2rhPKRvNDyW" : {
       "id" : "o8SdMB0VWFTRFltloczH2$$Ze2sy5CLkA2rhPKRvNDyW",
@@ -84,7 +90,9 @@
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
-        "isImported" : false
+        "isImported" : false,
+        "comment" : "Reads a movie statistics dataset and loads it into a DataFrame, containing information such as movie title, production date, genres, runtime, director details, ratings, votes, budget, and gross revenue.",
+        "autoUpdateComment" : true
       },
       "ports" : {
         "inputs" : [ ],
@@ -100,26 +108,159 @@
         "datasetId" : "datasets/dataset1"
       }
     },
-    "qOqsMw9T_A3JihyMZXrIJ$$T8KvA_rJ_hDus-DgiSNoA" : {
-      "id" : "qOqsMw9T_A3JihyMZXrIJ$$T8KvA_rJ_hDus-DgiSNoA",
-      "component" : "Reformat",
+    "pPx5Q2kQ8QFg0Nl6OryCr$$o1FSY5N3lkXl7_LCeDWbf" : {
+      "id" : "pPx5Q2kQ8QFg0Nl6OryCr$$o1FSY5N3lkXl7_LCeDWbf",
+      "component" : "OrderBy",
       "metadata" : {
-        "label" : "Reformat_1",
-        "slug" : "Reformat_1",
-        "x" : -380,
+        "label" : "by_average_rating_asc",
+        "slug" : "by_average_rating_asc",
+        "x" : -340,
         "y" : -180,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
-        "isImported" : false
+        "isImported" : false,
+        "comment" : "Sorts movies in ascending order based on their average rating.",
+        "autoUpdateComment" : true
       },
       "ports" : {
         "inputs" : [ {
-          "id" : "jy1ceF-YOOqxp_qxfMOg0$$G6ZsLfnVIemiIMTUTCo_a",
-          "slug" : "in0"
+          "id" : "ptmT5X9L2IUrrsWBG9Qsk$$xKtxN2rgBjLG461VnuilN",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "movie_title",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The title of the movie",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "production_date",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The date when the movie was produced",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "genres",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The genre(s) of the movie",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "runtime_minutes",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Duration of the movie in minutes",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "director_name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The name of the director of the movie",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "director_professions",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Professions or occupations of the movie director",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "director_birthYear",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The birth year of the movie director",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "director_deathYear",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Year of death of the movie director",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "movie_averageRating",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The average rating of the movie",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "movie_numerOfVotes",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The number of votes received for the movie",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "approval_Index",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Index indicating the level of approval or popularity of the movie",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Production budget $",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The budget in dollars allocated for the production of the movie",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Domestic gross $",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The amount of money the movie earned domestically",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Worldwide gross $",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The total gross revenue generated by the movie worldwide in dollars",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
         } ],
         "outputs" : [ {
-          "id" : "c2Og_26YOvdNlkf0RKgrr$$hHYgBelhwvPCuBTy1iNVU",
+          "id" : "l4rTKKwSfXT7MmjgFLtdB$$qk8wMr2lCxGCJNDvMx_2a",
           "slug" : "out"
         } ],
         "selectedInputFields" : [ ],
@@ -127,14 +268,17 @@
         "autoUpdateOnRun" : false
       },
       "properties" : {
-        "importLanguage" : "${$.workflow.metainfo.frontEndLanguage}",
-        "expressions" : [ ],
-        "importString" : "",
-        "activeTab" : "expressions",
-        "columnsSelector" : [ ]
+        "columnsSelector" : [ "ptmT5X9L2IUrrsWBG9Qsk$$xKtxN2rgBjLG461VnuilN##movie_averageRating" ],
+        "orders" : [ {
+          "expression" : {
+            "format" : "sql",
+            "expression" : "movie_averageRating"
+          },
+          "sortType" : "asc"
+        } ]
       },
       "componentInfo" : {
-        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.25&projectSubscriptionProjectId=12654&path=gems/Reformat",
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.25&projectSubscriptionProjectId=12654&path=gems/OrderBy",
         "projectName" : "ProphecySparkBasicsPython"
       }
     }
@@ -145,40 +289,5 @@
     "selectedInputFields" : [ ],
     "isCustomOutputSchema" : false,
     "autoUpdateOnRun" : false
-  },
-  "diagnostics" : [ {
-    "property" : "$.workflow.processes.o8SdMB0VWFTRFltloczH2$$Ze2sy5CLkA2rhPKRvNDyW.properties.dataset.schema",
-    "range" : {
-      "start" : {
-        "line" : 0,
-        "character" : 0
-      },
-      "end" : {
-        "line" : 0,
-        "character" : 0
-      }
-    },
-    "severity" : 2,
-    "message" : "Missing Schema. Please infer schema or provide it manually.",
-    "tags" : [ ],
-    "relatedInformation" : [ ],
-    "diagnosticType" : 1
-  }, {
-    "property" : "$.workflow.processes.qOqsMw9T_A3JihyMZXrIJ$$T8KvA_rJ_hDus-DgiSNoA",
-    "range" : {
-      "start" : {
-        "line" : 0,
-        "character" : 0
-      },
-      "end" : {
-        "line" : 0,
-        "character" : 0
-      }
-    },
-    "severity" : 1,
-    "message" : "Please connect input port in0",
-    "tags" : [ ],
-    "relatedInformation" : [ ],
-    "diagnosticType" : 1
-  } ]
+  }
 }
